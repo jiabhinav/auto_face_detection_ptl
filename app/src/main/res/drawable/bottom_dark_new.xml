@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <selector xmlns:android="http://schemas.android.com/apk/res/android">
+        <item>
+            <shape>
+                <!--<gradient-->
+                <!--android:startColor="@color/colorPrimary"-->
+                <!--android:centerColor="@color/white"-->
+                <!--android:endColor="@color/white"-->
+                <!--android:angle="270"-->
+                <!--android:type="linear"/>-->
+                <!--<gradient-->
+                <!--android:type="radial"-->
+                <!--android:gradientRadius="100%p"-->
+                <!--android:startColor="@color/white"-->
+                <!--android:endColor="#115ede" />-->
+                <!--<gradient android:angle="270" android:endColor="#181818" android:startColor="#616161" />-->
+                <solid android:color="@color/blue_bg"
+                    />
+                <!--<corners android:bottomRightRadius="@dimen/activity_margin_10" android:bottomLeftRadius="@dimen/activity_margin_10" android:topLeftRadius="@dimen/activity_margin_10" android:topRightRadius="@dimen/activity_margin_10" />-->
+
+                <corners android:bottomRightRadius="@dimen/_32dp" android:bottomLeftRadius="@dimen/_32dp" android:topLeftRadius="@dimen/_32dp" android:topRightRadius="@dimen/_32dp" />
+                <!--<gradient-->
+                <!--android:startColor="@color/lightblue"-->
+
+
+                <!--android:endColor="@color/colorPrimary"-->
+                <!--android:angle="0"-->
+                <!--&gt;-->
+                <!--&lt;!&ndash;android:centerColor="@color/colorPrimary"&ndash;&gt;-->
+
+                <!--</gradient>-->
+
+            </shape>
+        </item>
+    </selector>
+

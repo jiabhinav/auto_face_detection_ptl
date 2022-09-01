@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Abhinav_Docs/FaceBiocubeScan-PTL/app/src/main/res/drawable/ic_baseline_flip_camera_ios_24.xml" value="0.1435" />
+        <entry key="..\:/Abhinav_Docs/FaceBiocubeScan-PTL/app/src/main/res/layout/activity_camera.xml" value="0.22" />
+        <entry key="..\:/Abhinav_Docs/FaceBiocubeScan-PTL/app/src/main/res/layout/activity_splash.xml" value="0.18854166666666666" />
+        <entry key="..\:/Abhinav_Docs/FaceBiocubeScan-PTL/app/src/main/res/layout/item_fingerprint.xml" value="0.20416666666666666" />
+        <entry key="..\:/Abhinav_Docs/FingerBioScan/app/src/main/res/drawable/ic_overlay.xml" value="0.1" />
+        <entry key="..\:/Abhinav_Docs/FingerBioScan/app/src/main/res/layout/activity_camera.xml" value="0.20416666666666666" />
+        <entry key="..\:/Abhinav_Docs/FingerBioScan/app/src/main/res/layout/activity_instruction.xml" value="0.14" />
+        <entry key="..\:/Abhinav_Docs/FingerBioScan/app/src/main/res/layout/activity_register.xml" value="0.20416666666666666" />
+        <entry key="..\:/Abhinav_Docs/FingerBioScan/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
+        <entry key="..\:/Abhinav_Docs/FingerBioScan/app/src/main/res/layout/dialog_success.xml" value="0.20416666666666666" />
+        <entry key="..\:/Abhinav_Docs/FingerBioScan/app/src/main/res/layout/item_fingerprint.xml" value="0.20416666666666666" />
+        <entry key="..\:/Abhinav_Docs/FingerBioScan/app/src/main/res/layout/item_instructions.xml" value="0.20416666666666666" />
+        <entry key="..\:/Abhinav_Docs/PalmBiocubeScan/app/src/main/res/layout/activity_camera.xml" value="0.18796296296296297" />
+        <entry key="..\:/Abhinav_Docs/PalmBiocubeScan/app/src/main/res/layout/activity_instruction.xml" value="0.20416666666666666" />
+        <entry key="..\:/Abhinav_Docs/PalmBiocubeScan/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
+        <entry key="..\:/Abhinav_Docs/PalmBiocubeScan/app/src/main/res/layout/custom_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/drawable/bottom_dark_new.xml" value="0.1155" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/drawable/btn_bg.xml" value="0.1175" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/drawable/dialog_bg.xml" value="0.1155" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/drawable/ic_btn_bg.xml" value="0.1855" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/drawable/ic_close.xml" value="0.1145" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/drawable/ic_icon_ionic_ios_checkmark_circle.xml" value="0.1175" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1465" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/drawable/ic_left_fingers.xml" value="0.1465" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/drawable/ic_logo.xml" value="0.1175" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/drawable/ic_overlay.xml" value="0.136" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/drawable/ic_splash_bg.xml" value="0.1" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/drawable/spinner_background.xml" value="0.1855" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/drawable/splash_bg.xml" value="0.1" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/drawable/stroke_bg.xml" value="0.1855" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/font/poppins_bold.xml" value="0.14427083333333332" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/font/poppins_regular.xml" value="0.14427083333333332" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/font/poppins_regular_black.xml" value="0.14427083333333332" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/layout/activity_camera.xml" value="0.1640625" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/layout/activity_instruction.xml" value="0.359375" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/layout/activity_main.xml" value="0.23449131513647642" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/layout/activity_register.xml" value="0.22" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/layout/activity_splash.xml" value="0.14130434782608695" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/layout/custom_dialog.xml" value="0.24742268041237114" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/layout/custom_progress.xml" value="0.13333333333333333" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/layout/dialog_finger_scan.xml" value="0.22" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/layout/dialog_image_preview.xml" value="0.103125" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/layout/dialog_success.xml" value="0.14666666666666667" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/layout/item_fingerprint.xml" value="0.103125" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/layout/item_instructions.xml" value="0.3333333333333333" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/layout/progress.xml" value="0.13333333333333333" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/layout/progress_dialog.xml" value="0.1408514492753623" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/layout/spinner_list_item.xml" value="0.14166666666666666" />
+        <entry key="..\:/Biocube/FingerBioScan/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1465" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
