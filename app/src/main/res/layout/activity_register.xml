@@ -62,10 +62,11 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="@dimen/_20dp"
                     android:background="@drawable/stroke_bg"
+
                     android:gravity="center_vertical"
                     android:hint="@string/first_name"
                     android:imeOptions="actionNext"
-                    android:inputType="text"
+                    android:inputType="textCapSentences"
                     android:paddingStart="@dimen/_12dp"
                     android:singleLine="true"
                     android:textColor="@color/black"
@@ -108,7 +109,7 @@
                     android:gravity="center_vertical"
                     android:hint="@string/last_name"
                     android:imeOptions="actionNext"
-                    android:inputType="text"
+                    android:inputType="textCapSentences"
                     android:paddingStart="@dimen/_12dp"
                     android:singleLine="true"
                     android:textColor="@color/black"
@@ -142,6 +143,7 @@
                     android:inputType="number"
                     android:paddingStart="@dimen/_12dp"
                     android:singleLine="true"
+                    android:maxLength="10"
                     android:textColor="@color/black"
                     android:textColorHint="#808080"
                     android:textSize="16sp"
@@ -204,22 +206,38 @@
 
         </androidx.cardview.widget.CardView>
 
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_submit"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginBottom="24dp"
-            android:background="@drawable/ic_btn_bg"
-            android:fontFamily="@font/poppins_medium"
-            android:gravity="center"
-            android:text="@string/submit"
-            android:textColor="@color/white"
+            android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="@dimen/_20dp"
+            >
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_btn_bg"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/submit"
+                android:textColor="@color/white" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_face"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_btn_bg"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Face Register"
+                android:layout_marginLeft="@dimen/_12dp"
+                android:textColor="@color/white"
+                />
+        </LinearLayout>
+
+
+
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

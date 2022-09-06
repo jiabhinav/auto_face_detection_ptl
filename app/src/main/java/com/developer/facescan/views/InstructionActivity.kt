@@ -3,18 +3,24 @@ package com.developer.facescan.views
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import com.biocube.biocube_palm.session.SesssionManager
 import com.developer.facescan.R
 import com.developer.facescan.adapters.InstructionAdapter
 import com.developer.facescan.databinding.ActivityInstructionBinding
 import com.developer.facescan.interfaces.OnClickDialog
+import com.developer.facescan.session.DaggerManagerSessComponent
+import com.developer.facescan.session.MainActivityModule
+import com.developer.facescan.session.ManagerSessComponent
 import com.developer.facescan.utils.AppConstants
 import com.developer.facescan.utils.DialogChooseHand
 import com.developer.facescan.utils.MarginItemDecoration
 import com.developer.facescan.utils.PermissionsDelegate
 import com.developer.facescan.viewmodel.InstructionViewModel
+import javax.inject.Inject
 import kotlin.collections.ArrayList
 
 class InstructionActivity : AppCompatActivity(), OnClickDialog {
@@ -25,9 +31,29 @@ class InstructionActivity : AppCompatActivity(), OnClickDialog {
     lateinit var viewModel:InstructionViewModel
     private val permissionsDelegate= PermissionsDelegate(this)
     private var hasPermission: Boolean = false
+    @Inject
+    lateinit var sess: SesssionManager
+
+
+    var permission=false
+    var isLogin=false
+
+
+    override fun onStart() {
+        super.onStart()
+        val component: ManagerSessComponent = DaggerManagerSessComponent
+            .builder()
+            .mainActivityModule(MainActivityModule(this))
+            .build()
+        component.inject(this)
+        permission=permissionsDelegate.hasPermissions()
+        isLogin=sess.checkLogin()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_instruction)
+
         binding.rvInstructions.addItemDecoration(MarginItemDecoration(42))
 
 
@@ -38,8 +64,19 @@ class InstructionActivity : AppCompatActivity(), OnClickDialog {
 
         binding.btnAuthenticate.setOnClickListener {
 
-            if (permissionsDelegate.hasPermissions() ) {
-                DialogChooseHand(this,this).show()
+            if (permission) {
+               // DialogChooseHand(this,this).show()
+                if (isLogin)
+                {
+                    val intent = Intent(this, CameraActivity::class.java)
+                        .putExtra(AppConstants.ISREGISTRATIONMODE,false)
+                        startActivity(intent)
+                }
+                else
+                {
+                    Toast.makeText(this, "You are not registered, You have to register first", Toast.LENGTH_LONG).show()
+                }
+
             } else {
                 permissionsDelegate.requestPermissions()
             }

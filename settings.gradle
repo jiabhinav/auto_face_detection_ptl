@@ -4,6 +4,7 @@ pluginManagement {
         google()
         mavenCentral()
         jcenter()
+        maven { url "https://jitpack.io" }
 
     }
 }
@@ -17,8 +18,7 @@ dependencyResolutionManagement {
       
     }
 }
-rootProject.name = "FaceBiocubeScan_ptl"
+rootProject.name = "auto_face_detection_ptl"
 include ':app'
 
-
-include ':mylibrary'
+//include ':mylibrary'

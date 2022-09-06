@@ -12,5 +12,8 @@ data class Response(
     @SerializedName("status")
     var status: String,
     @SerializedName("user")
-    var username: String
+    var username: String,
+
+    @SerializedName("encodings")
+     var encodings: String
 )

@@ -2,7 +2,8 @@ package com.developer.facescan.utils
 
 object AppConstants {
     const val BASE_URL= "https://biopasstest.com:8443/ai/"
-    const val BASE_URL_PRIVATE= "http://10.159.236.7:6789/"
+    //const val BASE_URL_PRIVATE= "http://10.159.236.7:6789/"
+    const val BASE_URL_PRIVATE= " https://biopasstest.com:8443/ai/common/"
     const val NAME="name"
     const val GENDER="gender"
     const val AGE="age"

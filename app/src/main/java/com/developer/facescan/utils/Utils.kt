@@ -4,11 +4,13 @@ import android.app.Dialog
 import android.content.Context
 import android.content.res.Resources
 import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
+import android.util.Base64
 import android.util.Log
 import android.widget.Toast
 import androidx.annotation.RequiresApi
@@ -17,6 +19,7 @@ import com.developer.facescan.R
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
+
 
 object Utils {
 
@@ -89,7 +92,7 @@ object Utils {
         }
     }
 
-    @RequiresApi(Build.VERSION_CODES.M)
+
     fun isOnline(context: Context): Boolean {
         val connectivityManager =
             context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
@@ -127,5 +130,15 @@ object Utils {
     fun dpToPx(dp: Float): Int {
         return (dp * Resources.getSystem().displayMetrics.density).toInt()
     }
+
+    fun getBase64image(bitmap: Bitmap):String
+    {
+        val baos = ByteArrayOutputStream()
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
+        val imageBytes = baos.toByteArray()
+        val imageString: String = Base64.encodeToString(imageBytes, Base64.DEFAULT)
+        return imageString
+    }
+
 
 }

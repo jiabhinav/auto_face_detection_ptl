@@ -10,20 +10,30 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.DatePicker
 import android.widget.Toast
+import com.biocube.biocube_palm.session.SesssionManager
 import com.developer.facescan.R
 import com.developer.facescan.databinding.ActivityRegisterBinding
 import com.developer.facescan.interfaces.OnClickDialog
+import com.developer.facescan.model.ModelUser
+import com.developer.facescan.session.DaggerManagerSessComponent
+import com.developer.facescan.session.MainActivityModule
+import com.developer.facescan.session.ManagerSessComponent
 import com.developer.facescan.utils.AppConstants
 import com.developer.facescan.utils.DialogChooseHand
 import com.developer.facescan.utils.PermissionsDelegate
 import java.text.SimpleDateFormat
 import java.util.*
+import javax.inject.Inject
 
 class RegisterActivity : AppCompatActivity(),DatePickerDialog.OnDateSetListener, OnClickDialog {
     private lateinit var binding: ActivityRegisterBinding
     private var genderStr:String=""
     private val permissionsDelegate= PermissionsDelegate(this)
     private var hasPermission: Boolean = false
+
+    @Inject
+    lateinit var sess: SesssionManager
+
     var cal = Calendar.getInstance()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +48,7 @@ class RegisterActivity : AppCompatActivity(),DatePickerDialog.OnDateSetListener,
 
         val spinnerAdapter = ArrayAdapter(this,
             android.R.layout.simple_spinner_item, resources.getStringArray(R.array.gender))
-        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_item)
+        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         binding.spGender.adapter = spinnerAdapter
         binding.spGender.onItemSelectedListener = object :
             AdapterView.OnItemSelectedListener {
@@ -55,6 +65,13 @@ class RegisterActivity : AppCompatActivity(),DatePickerDialog.OnDateSetListener,
     }
 
     private fun initViews() {
+        val component: ManagerSessComponent = DaggerManagerSessComponent
+            .builder()
+            .mainActivityModule(MainActivityModule(this))
+            .build()
+        component.inject(this)
+
+
         val dialog=  DatePickerDialog(this@RegisterActivity,
             this,
             // set DatePickerDialog to point to today's date when it loads up
@@ -65,11 +82,25 @@ class RegisterActivity : AppCompatActivity(),DatePickerDialog.OnDateSetListener,
 
         binding.btnSubmit.setOnClickListener {
             if(checkValidations()) {
-                    DialogChooseHand(this,this).show()
+                    callIntent()
+                  //  DialogChooseHand(this,this).show()
             }
         }
         binding.etDob.setOnClickListener {
             dialog.show()
+        }
+
+        binding.btnFace.setOnClickListener{
+            if (sess.checkLogin())
+            {
+                val intent = Intent(this, CameraActivity::class.java)
+                    .putExtra(AppConstants.ISREGISTRATIONMODE,true)
+                     startActivity(intent)
+            }
+            else
+            {
+                Toast.makeText(this, "You are not registered, You have to register first", Toast.LENGTH_LONG).show()
+            }
         }
         }
 
@@ -143,19 +174,24 @@ private fun updateDateInView() {
         }else{
             handside=resources.getString(R.string.right)
         }
-        var random=(100000..999999).random().toString()
-        val intent = Intent(this, CameraActivity::class.java)
-            .putExtra(AppConstants.FNAME,binding.etFName.text.toString().replace(" ", "_"))
-            .putExtra(AppConstants.LNAME,binding.etLName.text.toString().replace(" ", "_"))
-            .putExtra(AppConstants.MOBILE,binding.etMobile.text.toString())
+        val random=(100000..999999).random()
 
-            .putExtra(AppConstants.DOB,binding.etDob.text.toString())
-            .putExtra(AppConstants.GENDER,genderStr)
+        val model= ModelUser().apply {
+            this.id=random
+            this.firstname=binding.etFName.text.toString().replace(" ", "_")
+            this.lastname=binding.etLName.text.toString().replace(" ", "_")
+            this.mobile=binding.etMobile.text.toString()
+            this.dob=binding.etDob.text.toString()
+            this.gender=genderStr
+            this.embedding=""
+
+        }
+        sess.sessionLogin(model)
+
+        val intent = Intent(this, CameraActivity::class.java)
             .putExtra(AppConstants.ISREGISTRATIONMODE,true)
-            .putExtra(AppConstants.HANDSIDE,handside)
-            .putExtra(AppConstants.RANDOM,random)
-        startActivity(intent)
-        reset()
+            startActivity(intent)
+              reset()
     }
     //            .putExtra(AppConstants.MNAME,binding.etMName.text.toString().replace(" ", "_"))
     //            .putExtra(AppConstants.AGE,binding.etAddress.text.toString())
@@ -166,6 +202,26 @@ private fun updateDateInView() {
         } else {
             permissionsDelegate.requestPermissions()
         }
+    }
+
+    fun callIntent()
+    {
+        val random=(100000..999999).random()
+        val model= ModelUser().apply {
+            this.id=random
+            this.firstname=binding.etFName.text.toString().replace(" ", "_")
+            this.lastname=binding.etLName.text.toString().replace(" ", "_")
+            this.mobile=binding.etMobile.text.toString()
+            this.dob=binding.etDob.text.toString()
+            this.gender=genderStr
+            this.embedding=""
+        }
+        sess.sessionLogin(model)
+
+        val intent = Intent(this, CameraActivity::class.java)
+            .putExtra(AppConstants.ISREGISTRATIONMODE,true)
+        startActivity(intent)
+        reset()
     }
 
 }

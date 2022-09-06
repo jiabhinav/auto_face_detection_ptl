@@ -1,3 +1,4 @@
+/*
 package com.developer.facescan.utils
 
 import android.content.Context
@@ -11,12 +12,13 @@ import com.google.gson.Gson
 import org.pytorch.*
 import org.pytorch.torchvision.TensorImageUtils
 
+
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
 import java.util.*
 
-class ObjectDetectorHelper(
+ class ObjectDetectorHelper(
   val context: Context,
   val objectDetectorListener: DetectorListener?) {
 
@@ -26,7 +28,6 @@ class ObjectDetectorHelper(
     }
 
     fun setupObjectDetector() {
-
         // loading serialized torchscript module from packaged into app android asset model.pt,
         // app/src/model/assets/model.pt
          modelName  = LiteModuleLoader.load(assetFilePath(context, "entryv2.ptl"))
@@ -36,7 +37,8 @@ class ObjectDetectorHelper(
 
     fun detect(image: Bitmap, imageRotation:Int,image2:Image) {
         Log.d("TAG", "detectbitmap: "+image.toString())
-     /*   if (objectDetector == null) {
+     */
+/*   if (objectDetector == null) {
             setupObjectDetector()
         }
 
@@ -56,7 +58,8 @@ class ObjectDetectorHelper(
         val tensorImage = imageProcessor.process(TensorImage.fromBitmap(image))
 
         val results = objectDetector?.detect(tensorImage)
-        inferenceTime = SystemClock.uptimeMillis() - inferenceTime*/
+        inferenceTime = SystemClock.uptimeMillis() - inferenceTime*//*
+
 
      //   Log.d("TAG", "wdqwqccqc : "+Gson().toJson(results))
 
@@ -69,11 +72,13 @@ class ObjectDetectorHelper(
 
         val face_std = floatArrayOf(1.0f, 1.0f, 1.0f)
 
-       /* val inputTensor = TensorImageUtils.bitmapToFloat32Tensor(image,0,0,224,224,
+       */
+/* val inputTensor = TensorImageUtils.bitmapToFloat32Tensor(image,0,0,224,224,
             TensorImageUtils.TORCHVISION_NORM_MEAN_RGB,
             TensorImageUtils.TORCHVISION_NORM_STD_RGB,
             MemoryFormat.CHANNELS_LAST
-        )*/
+        )*//*
+
         val inputTensor = TensorImageUtils.bitmapToFloat32Tensor(image,0,0,224,224,
             face_mean,
             face_std,
@@ -88,7 +93,7 @@ class ObjectDetectorHelper(
 
         val scores = outputTensor.dataAsFloatArray
 
-        Log.d("TAG", "detectfaces=1: "+Gson().toJson(scores))
+        Log.d("TAG", "detectfaces=1: "+ Gson().toJson(scores))
 
         var maxScore = -Float.MAX_VALUE
         var maxScoreIdx = -1
@@ -100,7 +105,8 @@ class ObjectDetectorHelper(
         }
 
 
-       /* if (scores[1]>=1.0E-10) {
+       */
+/* if (scores[1]>=1.0E-10) {
             maxScoreIdx = 1
             Log.d("TAG", "detectfaces=1: "+Gson().toJson(scores))
         }
@@ -108,13 +114,16 @@ class ObjectDetectorHelper(
         {
             maxScoreIdx = 0
             Log.d("TAG", "detectfaces=0: "+Gson().toJson(scores))
-        }*/
+        }*//*
 
 
-      /*  val floatArray = DoubleArray(scores.size)
+
+      */
+/*  val floatArray = DoubleArray(scores.size)
         for (i in 0 until scores.size) {
             floatArray[i] = scores.get(i).toDouble()
-        }*/
+        }*//*
+
 
       // val output=softmax(1.0,floatArray)
       // Log.d("TAG", "detectfaces=2: "+maxScoreIdx+"==="+maxScore)
@@ -164,3 +173,5 @@ class ObjectDetectorHelper(
         }
     }
 }
+
+*/

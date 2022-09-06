@@ -21,46 +21,24 @@
 
         </androidx.camera.view.PreviewView>
 
-       <!-- <ImageView
-            android:id="@+id/iv_transparent_view"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginRight="@dimen/_16dp"
-            android:src="@drawable/ic_left"
-            android:visibility="visible"
-            app:layout_constraintBottom_toTopOf="@+id/rv_images"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />-->
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardBackgroundColor="#43FFFFFF"
-            app:cardCornerRadius="@dimen/_8dp"
-            android:paddingBottom="@dimen/_56dp"
-            android:layout_marginTop="@dimen/_12dp"
-            android:layout_marginLeft="@dimen/_80dp"
-            android:layout_marginRight="@dimen/_80dp"
-            android:visibility="invisible"
-            android:id="@+id/cv_status"
-            app:layout_constraintEnd_toStartOf="parent"
-            app:layout_constraintStart_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" >
-
 
         <TextView
             android:id="@+id/txt_status"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_gravity="center"
+            android:background="@drawable/text_bg"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:textSize="@dimen/_18dp"
-            android:text="Realimage" />
-        </androidx.cardview.widget.CardView>
+            android:layout_marginTop="@dimen/_12dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginLeft="70dp"
+            android:textSize="@dimen/_16dp"
+            android:text=""
+            android:textAlignment="center"
+            android:padding="@dimen/_6dp"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
 
 
@@ -68,19 +46,25 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/distance"
+            android:id="@+id/txt_username"
             android:textColor="@color/white"
             android:textSize="@dimen/_20dp"
             android:textStyle="bold"
+            android:text=""
+            android:layout_marginRight="@dimen/_12dp"
             android:layout_marginBottom="@dimen/_20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintBottom_toTopOf="@id/rv_images"/>
+
+
+
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_images"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/btn_submit"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:orientation="horizontal"
@@ -95,83 +79,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
-<!--        <com.github.jorgecastillo.FillableLoader-->
-<!--            android:id="@+id/fillableLoader"-->
-<!--            android:layout_width="200dp"-->
-<!--            android:layout_height="100dp"-->
-<!--            app:fl_originalWidth="@integer/original_svg_width"-->
-<!--            app:fl_originalHeight="@integer/original_svg_height"-->
-<!--            app:fl_strokeColor="#1c9ade"-->
-<!--            app:fl_fillColor="#1c9ade"-->
-<!--            app:fl_strokeWidth="@dimen/stroke_width"-->
-<!--            app:fl_strokeDrawingDuration="@integer/stroke_drawing_duration"-->
-<!--            app:fl_fillDuration="@integer/fill_duration"-->
-<!--            app:fl_clippingTransform="waves"-->
-<!--            app:fl_fillPercentage="@integer/fill_percentage"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            />-->
 
-        <!--    <androidx.recyclerview.widget.RecyclerView-->
-        <!--        android:id="@+id/rv_images"-->
-        <!--        android:layout_width="match_parent"-->
-        <!--        android:layout_height="wrap_content"-->
-        <!--        app:layout_constraintBottom_toTopOf="@+id/img_capture_btn"-->
-        <!--        app:layout_constraintEnd_toEndOf="parent"-->
-        <!--        app:layout_constraintStart_toStartOf="parent" />-->
-
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_submit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="@string/submit"
-            android:visibility="gone"
-            android:textColor="@color/white"
-            android:background="@drawable/ic_btn_bg"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <ImageView
-            android:id="@+id/img_preview"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/iv_close"
-            android:layout_width="@dimen/_24dp"
-            android:layout_height="@dimen/_24dp"
-            android:src="@drawable/ic_close"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.94"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.050000012" />
-
-        <ImageView
-            android:id="@+id/iv_delete"
-            android:layout_width="@dimen/_24dp"
-            android:layout_height="@dimen/_24dp"
-            android:src="@drawable/ic_delete"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.78"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.050000012" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -182,6 +90,17 @@
             android:id="@+id/flip"
             app:layout_constraintTop_toTopOf="parent"
             android:src="@drawable/ic_baseline_flip_camera_ios_24"/>
+
+        <View
+            android:layout_width="281dp"
+            android:layout_height="378dp"
+            android:layout_marginTop="80dp"
+            android:id="@+id/view"
+            android:background="@drawable/ovalshape"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

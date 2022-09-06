@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Face-Bio-ptl</string>
+
+    <string name="welcome">Welcome to \nFingerBioScan</string>
+    <string name="left_hand">Left Hand</string>
+    <string name="left">left</string>
+    <string name="right_hand">Right Hand</string>
+    <string name="right">right</string>
+
+    <string name="choose_hand">Please choose the hand for finger print scan</string>
+
+    <string name="instruction">Instructions</string>
+    <string name="read_instructions">Please read the <b>below instructions</b> before capturing your thumbs images.</string>
+    <string name="registration">Registration</string>
+    <string name="authenticate">Authenticate</string>
+
+    <string name="select_gender_first">Please Select Gender.</string>
+    <string name="select_gender">Select Gender</string>
+
+    <string name="not_supported">Device Not Supported for this application.</string>
+
+    <string name="submit">Submit</string>
+    <string name="first_name">First Name</string>
+    <string name="middle_name">Middle Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="mobile">Mobile No.</string>
+    <string name="birth_date">Birth Date</string>
+    <string name="address">Permanent Address</string>
+
+    <string name="first_name_empty">Please Enter First Name.</string>
+    <string name="middle_name_empty">Please Enter Middle Name</string>
+    <string name="last_name_empty">Please Enter Last Name.</string>
+    <string name="mobile_empty">Please Enter Mobile No.</string>
+    <string name="birth_date_empty">Please Enter Birth Date</string>
+    <string name="address_empty">Please Enter Permanent Address</string>
+    <string name="finger_detected">Finger Detected.</string>
+    <string name="capturing">Capturing.</string>
+    <string name="uploading">Saving image. Kindly wait.</string>
+    <string name="authenticating">Authenticating.</string>
+    <string name="successfully_captured">Successfully Captured.</string>
+    <string name="successfully_registered">You are successfully registered.</string>
+    <string name="network_error">Network Error. Please try later.</string>
+    <string name="continue_with_right">Please continue for Right hand fingeprints upload</string>
+    <string name="continue_with_left">Please continue for Left hand fingeprints upload</string>
+    <string name="okay">okay</string>
+    <string name="wait_processing">Please wait…</string>
+
+<!--    Your Left hand fingerprints uploaded successfully\n-->
+<!--    Your Right hand fingerprints uploaded successfully\n-->
+    <!-- Instructions Array -->
+<!--    <string-array name="instructions">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item> </item>
+        <item> </item>-->
+    <string-array name="instructions">
+
+        <item>Hand Image should be in upward direction.</item>
+        <item>Select each category and capture at least 6 images of each category and for MISCELLANEOUS category image should be 10–15.</item>
+        <item>Images should be captured in proper lighting condition.</item>
+        <item>All four figures should be stuck together and thumb should be at 60 degree angle.</item>
+        <item>You can check the count of the images in the app, Please click a screenshot of that after you finished the process and upload it on google form.</item>
+        <item>Palm Left/Right , Dorsal Left/ Right correct and incorrect images in slide 3 and 5.</item>
+        <item>For Miscellaneous sample images are attached in coming slides.</item>
+        <item>You can write a remark about the lighting conditions.</item>
+    </string-array>
+
+    <!-- Gender Array -->
+    <string-array name="gender">
+        <item>Select Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Others</item>
+    </string-array>
+</resources>
