@@ -8,7 +8,7 @@
 
             <variable
                 name="viewModel"
-                type="com.developer.facescan.viewmodel.RegisterViewModel" />
+                type="com.developer.objectproof.viewmodel.RegisterViewModel" />
         </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

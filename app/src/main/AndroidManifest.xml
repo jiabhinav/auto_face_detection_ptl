@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.developer.facescan">
+    package="com.developer.objectproof">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
-        android:name="com.developer.facescan.application.App"
+        android:name="com.developer.objectproof.application.App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -21,19 +21,19 @@
         tools:targetApi="33"
         tools:replace="android:icon,android:theme">
         <activity
-            android:name="com.developer.facescan.views.CameraActivity"
+            android:name="com.developer.objectproof.views.CameraActivity"
             android:exported="false" />
         <activity
-            android:name="com.developer.facescan.views.RegisterActivity"
+            android:name="com.developer.objectproof.views.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name="com.developer.facescan.views.InstructionActivity"
+            android:name="com.developer.objectproof.views.InstructionActivity"
             android:exported="false" />
         <activity
-            android:name="com.developer.facescan.MainActivity"
+            android:name="com.developer.objectproof.MainActivity"
             android:exported="false" />
         <activity
-            android:name="com.developer.facescan.views.SplashActivity"
+            android:name="com.developer.objectproof.views.SplashActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>

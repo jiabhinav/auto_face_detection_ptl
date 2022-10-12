@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Face-Bio-ptl</string>
+    <string name="app_name">Bio Proof Detection</string>
 
     <string name="welcome">Welcome to \nFingerBioScan</string>
     <string name="left_hand">Left Hand</string>
@@ -44,6 +44,8 @@
     <string name="continue_with_left">Please continue for Left hand fingeprints upload</string>
     <string name="okay">okay</string>
     <string name="wait_processing">Please wait…</string>
+
+    <string name="face_inside">Object should be inside the place holder.</string>
 
 <!--    Your Left hand fingerprints uploaded successfully\n-->
 <!--    Your Right hand fingerprints uploaded successfully\n-->

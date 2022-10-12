@@ -92,14 +92,22 @@
             android:src="@drawable/ic_baseline_flip_camera_ios_24"/>
 
         <View
-            android:layout_width="281dp"
-            android:layout_height="378dp"
-            android:layout_marginTop="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_220sdp"
             android:id="@+id/view"
-            android:background="@drawable/ovalshape"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:background="@drawable/rectangleview"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.developer.objectproof.utils.OverlayView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/overlay"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
