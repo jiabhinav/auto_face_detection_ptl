@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Bio Proof Detection</string>
-
     <string name="welcome">Welcome to \nFingerBioScan</string>
     <string name="left_hand">Left Hand</string>
     <string name="left">left</string>
